@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% block title %}
+    <title>Home</title>
+
+    {% endblock %}
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+{% block content %}
+
+
+<h2 style="text-align: center">Welcome to Djangosoft</h2>
+
+
+<div class="float-right" style="margin-right: 100px">
+    <img src="{% static 'images/profile.jpg' %}"style="height: 200px;height: 300px;">
+<p><b>Founder: Mr Rashmi ranjan </b><br>
+10+ Years Industry Experience</p>
+</div>
+
+
+    <div class="container">
+    <h2 id="text">About The Institute</h2>
+<div class="col-md-6">
+    DJANGOSOFT is the best Django Training institute in India to students and professionals who want to become a good web developer and enhance their skills in this domain.
+    Django is the most popular web framework which is written in python & follows the MVT architectural pattern.
+    It is a free and open source. Django is maintained by the django software foundation, an independent organization. Making web sites with Django is not just smart and efficient, but enjoyable too.
+    Since it is built on the Python language, it offers codes that are robust and increases productivity.
+<p>In this Django Program by DJANGOSOFT you will be taught how to use Django
+    from beginner basics to advanced level by industry experts.</p>
+
+
+</div>
+{% endblock %}
+</body>
+</html>

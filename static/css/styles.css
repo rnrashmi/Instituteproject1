@@ -1,0 +1,19 @@
+body{
+    background-color:mediumturquoise ;
+}
+
+
+h1{
+text-align: center;
+    margin-top: -10px;
+    color: white;
+    font-size: 50px;
+
+}
+
+img{
+    margin-top: 20px;
+    margin-left: 500px;
+    margin-right: 10px;
+    width: 75%;
+}

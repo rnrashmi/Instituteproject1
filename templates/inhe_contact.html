@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html>
+<head>
+    {% block title %}
+    <title>Contact</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+
+{% block content %}
+ <div class="float-left">
+ <div class="container" style="width: 400px;height: 600px">
+<div class="row">
+    <div class="offset-md-3 col-md-12">
+            <form method="POST" >
+                {% csrf_token %}
+                <label>Enter Your name:</label>
+                <input type="text" name="sname"  class="form-control" required>
+
+                <label>Enter your mobile:</label>
+                <input type="number" name="smobile"  class="form-control" required>
+
+                <label>Enter course name:</label>
+                <input type="text" name="scourse"  class="form-control" required>
+
+
+                <label>Enter location:</label>
+                <input type="name" name="sloc"  class="form-control" required>
+
+                <center>
+                    <input type="submit" value="send" class="btn btn-success">
+                    <input type="reset" value="clear" class="btn btn-danger">
+                </center>
+
+            </form>
+        </div>
+    </div>
+     </div>
+
+</div>
+
+<div id="googleMap" style="width:30%;height:400px;margin-left:1000px;margin-bottom:200px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(17.385044,78.486671),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp,
+{
+        zoom: 4,
+        center: location
+});
+var maker = new google.maps.Maker({
+        position:location,
+        map:map
+    });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm8nIJYpoXcje7dyds2hHJGpRI8ktsgOE&callback=myMap">
+</script>
+
+<style>
+.row{
+    margin-top: 10px;
+}
+
+</style>
+
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+<html>
+<head>
+    <title>Services</title>
+</head>
+
+<body>
+{% block content %}
+<table class="table table-bordered">
+
+    <thead class="thead-blue">
+    <tr>
+        <th>Course ID</th>
+        <th>Course Name</th>
+        <th>Trainer</th>
+        <th>Course Duration</th>
+        <th>Course Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>10</td>
+        <td>Python</td>
+        <td>Mohan Reddy</td>
+        <td>60 Days</td>
+        <td class="btn btn-primary">download</td>
+    </tr>
+
+       <tr>
+        <td>11</td>
+        <td>django</td>
+        <td>Mr Narayan</td>
+        <td>45 Days</td>
+        <td class="btn btn-primary">download</td>
+    </tr>
+
+       <tr>
+        <td>11</td>
+        <td>REst API</td>
+        <td>Mr Srinivas</td>
+        <td>60 Days</td>
+        <td class="btn btn-primary">download</td>
+    </tr>
+
+       <tr>
+        <td>12</td>
+        <td>Java</td>
+        <td>Mr Harekrushna</td>
+        <td>5 Months</td>
+        <td class="btn btn-primary">download</td>
+    </tr>
+
+       <tr>
+        <td>13</td>
+        <td>UI</td>
+        <td>Mr Venktesh</td>
+        <td>45 Days</td>
+        <td class="btn btn-primary">download</td>
+    </tr>
+       <tr>
+        <td>14</td>
+        <td>React Js</td>
+        <td>Mr Sai</td>
+        <td>60 Days</td>
+        <td class="btn btn-primary">download</td>
+    </tr>
+    </tbody>
+</table>
+
+{% endblock %}
+</body>
+</html>
