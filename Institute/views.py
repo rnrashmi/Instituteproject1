@@ -47,7 +47,7 @@ def gallery_view(request):
 
 
 def feedback_view(request):
-    if request.method == "POST":
+    if request.method =="POST":
         name1=request.POST.get('name')
         rating1=request.POST.get('rating')
         feedback1=request.POST.get('feedback')
